@@ -8,11 +8,17 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UITextFieldDelegate {
 
+    @IBOutlet weak var ZipField: UITextField!
+    @IBOutlet weak var MoneyField: UITextField!
+    @IBOutlet weak var SwitchField: UITextField!
+    
+    let zipCodeDelegate = ZipCodeFieldDelegate()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        self.ZipField.delegate = zipCodeDelegate
     }
 
 
