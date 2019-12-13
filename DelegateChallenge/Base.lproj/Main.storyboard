@@ -16,7 +16,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Yn0-xY-WKq" userLabel="Zip Field">
-                                <rect key="frame" x="48" y="80" width="318" height="34"/>
+                                <rect key="frame" x="80.5" y="80" width="318" height="34"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="318" id="0k9-9M-HXe"/>
                                     <constraint firstAttribute="height" constant="34" id="wPJ-9D-rUO"/>
@@ -24,24 +24,28 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="at1-Nh-KlV" userLabel="Money Field">
-                                <rect key="frame" x="48" y="136" width="318" height="34"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="$0.00" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="at1-Nh-KlV" userLabel="Cash Field">
+                                <rect key="frame" x="80.5" y="136" width="318" height="34"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="318" id="eHw-Jm-p6C"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="318" id="eHw-Jm-p6C"/>
                                     <constraint firstAttribute="height" constant="34" id="iui-D2-0M5"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZQI-9m-i5R" userLabel="Switch Field">
-                                <rect key="frame" x="48" y="192" width="318" height="34"/>
+                                <rect key="frame" x="80.5" y="192" width="253" height="34"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="34" id="73n-Y9-Get"/>
-                                    <constraint firstAttribute="width" constant="318" id="NvF-7p-AL8"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="253" id="ySP-gU-ipf" userLabel="width = 253"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jNy-67-GVI">
+                                <rect key="frame" x="347" y="192" width="49" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </switch>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -55,9 +59,10 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
-                        <outlet property="MoneyField" destination="at1-Nh-KlV" id="Rls-2V-M0f"/>
+                        <outlet property="CashField" destination="at1-Nh-KlV" id="20Z-3C-83U"/>
                         <outlet property="SwitchField" destination="ZQI-9m-i5R" id="BSr-3J-Z9Q"/>
                         <outlet property="ZipField" destination="Yn0-xY-WKq" id="YB8-5r-s9w"/>
+                        <outlet property="txtSwitch" destination="jNy-67-GVI" id="iwn-xX-IR0"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
